@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #583a58;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .container {
+    /* Chuyen sang cot doc tren dien thoai */
+    flex-direction: column;
+  }
+  .user-list {
+    /* Khi là cột, flex-basis sẽ điều khiển chiều cao */
+    /* flex: 0 0 40%; 40% chiều cao cho danh sách người dùng trên điện thoại */
+    flex: 0 0 auto;
+    height: 40vh;
+    overflow-y: auto;
+  }
+  .user-detail {
+    /* Khi là cột, flex-basis sẽ điều khiển chiều cao */
+    /* flex: 0 0 60%; 60% chiều cao cho chi tiết người dùng trên điện thoại */
+    flex: 1;
+  }
+
+}
+
+.panel {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Thiết lập tỉ lệ cho màn hình lớn (desktop) */
+.user-list {
+  flex: 0 0 30%; /* 30% chiều rộng cho danh sách người dùng trên desktop */
+}
+
+.user-detail {
+  flex: 0 0 70%; /* 70% chiều rộng cho chi tiết người dùng trên desktop */
+  font-size: 20px;
+
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.user-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+
+  border: 1px solid #3d123b;
+  border-width: 2px;
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  min-height: 30px;
+
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.user-list li:last-child {
+    margin-bottom: 0; /* Loại bỏ margin-bottom cho phần tử cuối cùng */
+}
+
+.user-list li:hover {
+  background-color: #d4d2d2;
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+strong {
+  display: inline-block;
+  width: 200px;
+}
+
+.hd{
+  text-align: center;
+}

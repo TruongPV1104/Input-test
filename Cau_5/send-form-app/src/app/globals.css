@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #6a5acd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 40px; /* ➕ Thêm khoảng cách dưới */
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  padding: 20px;
+}
+
+.form-wrapper {
+  background-color: #ff6347;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;              /* ➕ Rộng hơn */
+  max-width: 600px;        /* ➕ Chiều rộng tối đa */
+  margin: 0 auto 40px;     /* ➕ Cách đáy */
+}
+
+.contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+textarea {
+  border-radius: 20px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  background-color: #74df79;
+  color: rgb(255, 255, 255);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 99px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: auto;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #3c8346;
+}
+
+h1{
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.toast.error {
+  background-color: #f44336;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}
