@@ -1,8 +1,12 @@
 const express = require('express')
 const db = require('./db')
+require("dotenv").config();
+const bodyParser = require('body-parser');
 
 const app = express()
 const port = 3000
+app.use(express.json());
+
 
 app.post('/api/userauthentication', async (req, res) => {
     try {
@@ -18,7 +22,7 @@ app.post('/api/userauthentication', async (req, res) => {
         request.input('PasswordHash', db.sql.NVarChar, PasswordHash);
         request.input('Email', db.sql.NVarChar, Email);
         request.input('RegistrationDate', db.sql.DateTime, new Date(RegistrationDate));
-        request.input('IsActive',db.sql.bit, IsActive)
+        request.input('IsActive',db.sql.Bit, IsActive)
         // request.input('')
 
         // Inset to

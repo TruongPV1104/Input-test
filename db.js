@@ -1,11 +1,17 @@
 const express = require('express')
 const sql = require('mssql')
+require("dotenv").config();
+
+const user = process.env.USER;
+const password = process.env.PASSWORD
+const server = process.env.SERVER
+const database = process.env.DATABASE
 
 const config = {
-    user: 'user_study',
-    password: 'tim@2024',
-    server: 'cvn-veng',
-    database: 'Study_newcomer',
+    user,
+    password,
+    server,
+    database,
     options:{
         trustedConnection: true,
         enableArithAbort: true,
